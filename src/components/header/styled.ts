@@ -6,8 +6,6 @@ export const Header = styled.header`
   align-items: center;
 
   margin: 1.125rem 0.625rem;
-
-  background-color: red;
 `
 
 export const Title = styled.h1`
