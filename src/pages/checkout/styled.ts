@@ -64,11 +64,15 @@ export const Image = styled.img`
 export const ContainerCheckout = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
   flex-shrink: 0;
   gap: 1.3125rem;
 
   padding: 1rem;
   margin: 0 1rem;
+
+  height: 90vh;
 
   border-radius: 0.25rem;
 
@@ -131,11 +135,15 @@ export const CardTitle = styled.h4`
   `
 
 export const CardPrice = styled.p`
-  color: #2f2e41;
-  `
+  font-size: 1rem;
+
+color: #2f2e41;
+`
 
 export const CardTextTotal = styled.span`
   font-size: 0.75rem;
+  text-align: right;
+
   color: #999999;
 `
 
@@ -143,4 +151,37 @@ export const CardTextPrice = styled.span`
   font-size: 1rem;
 
   color: #2f2e41;
+`
+export const ContainerTotal = styled.div`
+  width: 100%;
+
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 0.5rem;
+
+    span {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    clear: both;
+    display: block;
+
+    position: absolute;
+    left: 0;
+    top: -1rem;
+
+    width: 100%;
+    height: 0.0625rem;
+
+    background-color: #999999;
+  }
 `

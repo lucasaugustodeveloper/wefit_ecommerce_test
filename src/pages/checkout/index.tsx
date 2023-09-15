@@ -1,3 +1,4 @@
+import Button from '../../components/button'
 import Header from '../../components/header'
 import IconButton from '../../components/button/icon'
 
@@ -36,6 +37,15 @@ export default function Checkout() {
 
           </S.CardContainerInfo>
         </S.Card>
+
+        <S.ContainerTotal>
+          <div className="container">
+            <S.CardTextTotal>Total</S.CardTextTotal>
+            <S.CardTextPrice>R$ 29,99</S.CardTextPrice>
+          </div>
+          <Button size="full">finalizar pedido</Button>
+        </S.ContainerTotal>
+
       </S.ContainerCheckout>
     </>
   )
