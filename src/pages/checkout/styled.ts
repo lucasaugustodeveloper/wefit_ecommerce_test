@@ -60,3 +60,87 @@ export const Image = styled.img`
 
   margin-bottom: 2rem;
 `
+
+export const ContainerCheckout = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 1.3125rem;
+
+  padding: 1rem;
+  margin: 0 1rem;
+
+  border-radius: 0.25rem;
+
+  background-color: #ffffff;
+`
+
+export const Card = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+`
+
+export const CardContainerImage = styled.div`
+  width: 4rem;
+  height: 5.125rem;
+
+  margin-right: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+  }
+`
+
+export const CardContainerInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 75%;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    &.spacing {
+      &-top {
+        padding-top: 0.5rem;
+
+        div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+`
+
+export const CardTitle = styled.h4`
+  font-size: 1.25rem;
+  font-weight: inherit;
+
+  color: #2f2e41;
+  `
+
+export const CardPrice = styled.p`
+  color: #2f2e41;
+  `
+
+export const CardTextTotal = styled.span`
+  font-size: 0.75rem;
+  color: #999999;
+`
+
+export const CardTextPrice = styled.span`
+  font-size: 1rem;
+
+  color: #2f2e41;
+`
