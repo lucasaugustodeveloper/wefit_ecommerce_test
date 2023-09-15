@@ -19,4 +19,10 @@ export const Container = styled.main<ContainerProps>`
 
     height: 85vh;
   `}
-  `
+
+  @media (min-width: 76.8rem) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+`
