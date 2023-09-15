@@ -1,8 +1,12 @@
 import ImageShoppingCart from '../../assets/images/shoppingCart.svg'
+import MinusIcon from '../../assets/images/minusIcon.svg'
+import PlusIcon from '../../assets/images/plusIcon.svg'
+import TrashIcon from '../../assets/images/trash.svg'
 
 import styled, { css } from 'styled-components'
 
 import { ButtonProps } from '.'
+import { IconButtonProps } from './icon'
 
 const modifiersButton = {
   cart: () => css`
@@ -41,6 +45,18 @@ const modifiersSize = {
   `
 }
 
+const modifiersIconButton = {
+  minus: () => css`
+    background-image: ${`url(${MinusIcon})`};
+  `,
+  plus: () => css`
+    background-image: ${`url(${PlusIcon})`};
+  `,
+  trash: () => css`
+    background-image: ${`url(${TrashIcon})`};
+  `,
+}
+
 export const Button = styled.button<ButtonProps>`
   font-size: 0.75rem;
   font-weight: inherit;
@@ -69,4 +85,18 @@ export const Button = styled.button<ButtonProps>`
     ${({ cart }) => !!cart && modifiersButton.cart}
   }
 
+`
+
+export const Iconbutton = styled.button<IconButtonProps>`
+  width: 1.125rem;
+  height: 1.125rem;
+
+  border: none;
+  border-radius: 1.3rem;
+  background: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+
+  ${({ icon }) => modifiersIconButton[icon]}
 `
