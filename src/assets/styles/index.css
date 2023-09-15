@@ -23,9 +23,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 62.5%;
     font-style: normal;
     font-weight: 700;
 	line-height: 1;
