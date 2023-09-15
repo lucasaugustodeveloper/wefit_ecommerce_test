@@ -5,11 +5,12 @@ export type ButtonProps = {
   cart?: boolean
   count?: boolean
   onClick?: () => void
+  size?: 'small' | 'medium' | 'large' | 'full'
 }
 
-export default function Button({ children, onClick, cart, count }: ButtonProps) {
+export default function Button({ children, onClick, cart, count, size = 'medium' }: ButtonProps) {
   return (
-    <S.Button cart={cart} onClick={onClick}>
+    <S.Button cart={cart} onClick={onClick} size={size}>
       {count && <p className='count'>0</p>}
       {children}
     </S.Button>
