@@ -2,7 +2,8 @@ import Button from '../button'
 
 import * as S from './styled'
 
-type CardProps = {
+export type CardProps = {
+  id?: number
   image: string
   title: string
   price: string
