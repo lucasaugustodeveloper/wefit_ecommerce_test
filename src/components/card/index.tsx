@@ -7,9 +7,17 @@ export type CardProps = {
   image: string
   title: string
   price: string
+  onClick?: () => void
+  active?: boolean
 }
 
-export default function Card({ image, title, price }: CardProps) {
+export default function Card({
+  image,
+  title,
+  price,
+  onClick,
+  active
+}: CardProps) {
   return (
     <S.Container>
       <S.Card>
@@ -21,7 +29,9 @@ export default function Card({ image, title, price }: CardProps) {
         <S.Price>R$ {price}</S.Price>
       </S.Card>
 
-      <Button cart count>adiciona ao carrinho</Button>
+      <Button cart count onClick={onClick} active={active}>
+        adiciona ao carrinho
+      </Button>
     </S.Container>
   )
 }

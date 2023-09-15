@@ -4,6 +4,8 @@ import Card, { CardProps } from '../../components/card'
 import Header from '../../components/header'
 import Loading from '../../components/loading'
 
+import { saveItem, getItems } from '../../services'
+
 import * as S from './styled'
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
               image={card.image}
               title={card.title}
               price={card.price}
+              onClick={() => saveItem(card.id)}
+              active={getItems.includes(card.id)}
             />
           )
         )}

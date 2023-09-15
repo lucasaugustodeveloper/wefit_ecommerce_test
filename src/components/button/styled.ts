@@ -72,7 +72,7 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 0.25rem;
   padding: 0.5rem;
   
-  background-color: #009edd;
+  background-color: ${({ active = false }) => active ? '#039B00' : '#009edd'};
   color: #ffffff;
 
   width: 100%;
